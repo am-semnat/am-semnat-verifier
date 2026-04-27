@@ -1,0 +1,63 @@
+{
+  "name": "@amsemnat/verifier-node",
+  "version": "0.1.0",
+  "description": "Pure-Node verifier for Romanian eID artifacts produced by the am-semnat SDKs — eMRTD passive auth and PAdES B-B signer verification.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "eid",
+    "romania",
+    "emrtd",
+    "passive-authentication",
+    "pades",
+    "signature",
+    "verifier",
+    "amsemnat"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/am-semnat/am-semnat-verifier-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/am-semnat/am-semnat-verifier-node/issues"
+  },
+  "author": "am-semnat contributors",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/am-semnat/am-semnat-verifier-node",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "asn1js": "^3.0.5",
+    "pkijs": "^3.2.4",
+    "pvtsutils": "^1.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.9"
+  }
+}

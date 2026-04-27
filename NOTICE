@@ -1,0 +1,12 @@
+am-semnat-verifier-node
+Copyright 2026 am-semnat contributors
+
+This package contains no vendored third-party source. Runtime
+dependencies (`pkijs`, `asn1js`, `pvtsutils`) are MIT-licensed and pulled
+in via npm; their attribution and license texts ship with their
+respective packages under `node_modules/`.
+
+The package verifies artifacts produced by the sibling am-semnat SDKs
+(`AmSemnatSDK`, `ro.amsemnat:am-semnat-sdk`, `@amsemnat/expo-sdk`). It
+does not embed any Romanian MAI trust material; consumers supply CSCA
+and DGEP trust anchors at call time.
