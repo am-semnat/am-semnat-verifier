@@ -1,6 +1,6 @@
 {
-  "name": "@amsemnat/verifier-node",
-  "version": "0.1.1",
+  "name": "@amsemnat/verifier",
+  "version": "0.1.2",
   "description": "Verifier for Romanian eID artifacts produced by the am-semnat SDKs — eMRTD passive auth and PAdES B-B signer verification. Runs in Node 20+, modern browsers, and edge runtimes.",
   "type": "module",
   "main": "dist/index.js",
@@ -35,14 +35,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/am-semnat/am-semnat-verifier-node.git"
+    "url": "https://github.com/am-semnat/am-semnat-verifier.git"
   },
   "bugs": {
-    "url": "https://github.com/am-semnat/am-semnat-verifier-node/issues"
+    "url": "https://github.com/am-semnat/am-semnat-verifier/issues"
   },
   "author": "am-semnat contributors",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/am-semnat/am-semnat-verifier-node",
+  "homepage": "https://github.com/am-semnat/am-semnat-verifier",
   "files": [
     "dist",
     "README.md",

@@ -1,11 +1,31 @@
 # Changelog
 
-All notable changes to `@amsemnat/verifier-node` are documented in this file.
+All notable changes to `@amsemnat/verifier` are documented in this file.
 
 The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Version numbers ship in lockstep with the sibling SDKs
 (`am-semnat-ios-sdk`, `am-semnat-android-sdk`, `@amsemnat/expo-sdk`)
 through the 0.x cycle.
+
+## 0.1.2 — 2026-04-27
+
+### Changed
+
+- **Renamed package** from `@amsemnat/verifier-node` to `@amsemnat/verifier`.
+  The old name shipped before the WebCrypto migration in 0.1.1, when the
+  package really was Node-only; now that the same `dist/` runs unchanged in
+  browsers, edge runtimes, Deno, and Bun, the `-node` suffix is misleading.
+  Source code, public API, and `dist/` contents are byte-identical to
+  `@amsemnat/verifier-node@0.1.1`. Migrate via:
+
+  ```bash
+  npm uninstall @amsemnat/verifier-node
+  npm install @amsemnat/verifier
+  ```
+
+  …and replace `from "@amsemnat/verifier-node"` with `from "@amsemnat/verifier"`
+  in your imports. `@amsemnat/verifier-node@0.1.1` is deprecated on npm with a
+  pointer to this package and remains installable indefinitely.
 
 ## 0.1.1 — 2026-04-27
 

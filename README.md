@@ -1,4 +1,4 @@
-# `@amsemnat/verifier-node`
+# `@amsemnat/verifier`
 
 Verifier for Romanian eID artifacts produced by the
 [am-semnat](https://amsemnat.ro) SDKs. Pure JavaScript, runs unchanged
@@ -37,7 +37,7 @@ appropriate for your trust window.
 ## Install
 
 ```bash
-npm install @amsemnat/verifier-node
+npm install @amsemnat/verifier
 ```
 
 ESM-only. Server-side: Node 20 LTS or newer (for native
@@ -47,7 +47,7 @@ ESM-only. Server-side: Node 20 LTS or newer (for native
 
 ```ts
 import { readFileSync } from "node:fs";
-import { verifyPassive } from "@amsemnat/verifier-node";
+import { verifyPassive } from "@amsemnat/verifier";
 
 const csca = readFileSync("./csca-romania.cer"); // DER, fetched from DGP
 
@@ -70,7 +70,7 @@ if (!result.valid) {
 
 ```ts
 import { readFileSync } from "node:fs";
-import { verifyPadesSignatures } from "@amsemnat/verifier-node";
+import { verifyPadesSignatures } from "@amsemnat/verifier";
 
 const root = readFileSync("./ro-cei-mai-root-ca.cer");
 const sub = readFileSync("./ro-cei-mai-sub-ca.cer");
@@ -92,7 +92,7 @@ for (const sig of results) {
 ## Quick start — PAdES signature (browser)
 
 ```ts
-import { verifyPadesSignatures } from "@amsemnat/verifier-node";
+import { verifyPadesSignatures } from "@amsemnat/verifier";
 
 // Trust anchors fetched as static assets (DER), or bundled. Both work.
 const [root, sub] = await Promise.all([
