@@ -12,11 +12,11 @@ am-semnat-sdk/
 ├── ios/             # AmSemnatSDK podspec
 ├── android/         # ro.amsemnat:am-semnat-sdk
 ├── expo/            # @amsemnat/expo-sdk
-└── verifier-node/   # this package
+└── verifier/        # this package
 ```
 
 Each subdir is its own git repo with its own publish channel. The
-verifier ships independently to npm as `@amsemnat/verifier-node`.
+verifier ships independently to npm as `@amsemnat/verifier`.
 
 ## Public API is frozen
 
@@ -59,5 +59,5 @@ on demand using `node-forge` + `pkijs` + `pdf-lib`.
 File against whichever repo the bug lives in:
 
 - API surface / cross-platform semantics → `am-semnat-sdk` meta repo
-- Verifier behaviour or false positives/negatives → `am-semnat-verifier-node`
+- Verifier behaviour or false positives/negatives → `am-semnat-verifier`
 - Mobile read/sign behaviour → `am-semnat-ios-sdk` / `am-semnat-android-sdk`

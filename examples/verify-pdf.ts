@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { argv } from "node:process";
-import { verifyPadesSignatures } from "@amsemnat/verifier-node";
+import { verifyPadesSignatures } from "@amsemnat/verifier";
 
 const [pdfPath, ...anchorPaths] = argv.slice(2);
 
